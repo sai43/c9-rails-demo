@@ -50,10 +50,9 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
-    
-    if @post.user_id == current_user.id
        respond_to do |format|
-          if @post.update(post_params)
+          if @post.user.eql?(current_user)
+            @post.update(post_params)
             format.html { redirect_to @post, notice: 'Post was successfully updated.' }
             format.json { render :show, status: :ok, location: @post }
           else
@@ -61,13 +60,6 @@ class PostsController < ApplicationController
             format.json { render json: @post.errors, status: :unprocessable_entity }
           end
        end
-    else
-      respond_to do |format|
-        format.html { redirect_to posts_url, notice: 'you\'re trying to modify other users post' }
-        format.json {render json: {message: 'you\re trying to modify other users post'}, status: 403}
-      end
-    end
-    
   end
 
   # DELETE /posts/1
