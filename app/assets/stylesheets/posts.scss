@@ -2,26 +2,28 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// body{
-//     font-family:Lora,'Times New Roman',serif;
-//     font-size:20px;
-//     color:#404040
-//     }
-// p{line-height:1.5;margin:30px 0}
-// p a{text-decoration:underline}
-// h1,h2,h3,h4,h5,h6{
-//     font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-//     font-weight:800
-// }
-// a{color:#404040}
-// a:hover,a:focus{color:#0085a1}
-// a img:hover,a img:focus{cursor:zoom-in}
-// blockquote{color:gray;font-style:italic}
-// hr.small{max-width:100px;
-// margin:15px auto;
-// border-width:4px;
-// border-color:#fff
-// }
+body{
+    font-family:Lora,'Times New Roman',serif;
+    font-size:20px;
+    color:#404040
+    }
+    
+p{line-height:1.5;margin:30px 0}
+p a{text-decoration:underline}
+h1,h2,h3,h4,h5,h6{
+    font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight:800
+}
+
+a{color:#404040}
+a:hover,a:focus{color:#0085a1}
+a img:hover,a img:focus{cursor:zoom-in}
+blockquote{color:gray;font-style:italic}
+hr.small{max-width:100px;
+        margin:15px auto;
+        border-width:4px;
+        border-color:#fff
+        }
 // .navbar-custom{position:absolute;
 // top:0;
 // left:0;
