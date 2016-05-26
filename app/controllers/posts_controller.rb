@@ -6,7 +6,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-     @posts = Post.all
+    # @posts = Post.all
+     @posts = Post.all.page(params[:page])
+     #@posts = Post.order(:title).page params[:page]
+     
     # debugger
     # puts "Need to call debugger here for testing"
     # Rails.logger.debug @posts.inspect
@@ -84,6 +87,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :image)
     end
 end

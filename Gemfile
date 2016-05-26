@@ -15,6 +15,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # user authentication
 gem 'devise'
 
+# pagination
+gem 'kaminari'
+
+# file uploading
+gem 'carrierwave'
+
 group :development, :test do
   gem 'byebug'
 end

@@ -9,5 +9,7 @@ class Post < ActiveRecord::Base
     
     belongs_to :user  #one_to_one
     
+     mount_uploader :image, ImageUploader
+    
     
 end
