@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   end
 
   def gallery
+    @image_urls = Post.all.map {|post| post.image_url if post.image?}.compact!
   end
 
   def contact
