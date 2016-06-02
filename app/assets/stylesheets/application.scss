@@ -14,11 +14,15 @@
  *= require_self
  */
  
- $navbar-default-bg: #312312;
-$light-orange: #ff8c00;
-$navbar-default-color: $light-orange;
+//  $navbar-default-bg: #312312;
+// $light-orange: #ff8c00;
+// $navbar-default-color: $light-orange;
 
 @import "bootstrap-sprockets";
 //@import "bootstrap";
 @import 'bootstrap-custom';
 @import 'posts';
+
+.navbar.navbar-default.navbar-custom.navbar-fixed-top{
+    background-color: cadetblue;
+}
