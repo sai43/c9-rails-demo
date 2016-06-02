@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
-                  <% @posts.each do |post| %>
-                  
+                <% @posts.each do |post| %>
                   <%= link_to  post_path(post) do %>
                         <h2 class="post-title">
                             <%= post.title %>
@@ -17,11 +16,9 @@
                                                     :omission => "..." %>
                         </h3>
                   <% end %>
-                    
-                    <p class="post-meta">Posted by <%= post.user.email %> on <%= post.created_at.strftime('%b %d, %Y') %></p>
-                </div>
-                  
+                  <p class="post-meta">Posted by <%= post.user.email %> on <%= post.created_at.strftime('%b %d, %Y') %></p>
                   <% end %>
+                </div>
                 
                 <!-- Pager -->
                 <ul class="pager">
@@ -35,6 +32,8 @@
                 </ul>
             </div>
         </div>
+    
+    
     </div>
 
     <hr>
