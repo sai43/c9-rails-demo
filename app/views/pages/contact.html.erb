@@ -1,2 +1,50 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+ <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Want to get in touch with me? Fill out the form below to send me a message and I will try to get back to you within 24 hours!</p>
+                <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+                <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+                <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+                <!--<form name="sentMessage" id="contactForm" novalidate>-->
+            <%= form_tag('/contact', :name => "sentMessage", :id => "contactForm") do -%>
+                 <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                       <%= label_tag 'name', 'Name' %>
+                       <%= text_field_tag 'name', nil, class: 'form-control', id: 'name', placeholder: 'Name' %>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                 </div>
+                 
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                       <%= label_tag 'email', 'Email' %>
+                       <%= text_field_tag 'email', nil, class: 'form-control', id: 'email', placeholder: 'Email' %>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                 </div>  
+                 
+                 
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                          <%= label_tag 'message', 'Message' %>
+                          <%= text_area_tag 'message', nil, rows: 6, class: 'form-control', id: 'message', placeholder: 'Message' %>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <%= submit_tag 'Send', class: 'btn btn-default' %>
+                        </div>
+                    </div>
+             
+              
+            <% end -%>
+
+            </div>
+        </div>
+    </div>
+
+    

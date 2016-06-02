@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get 'pages/gallery'
 
   get 'pages/contact'
-
+  
+  match '/contact' => 'pages#contact', via: [:get, :post]
+  
   devise_for :users
   
   resources :posts

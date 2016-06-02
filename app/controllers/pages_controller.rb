@@ -13,5 +13,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    name = params[:name]
+    
   end
 end
