@@ -7,11 +7,11 @@
                 <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
                 <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
                 <!--<form name="sentMessage" id="contactForm" novalidate>-->
-            <%= form_tag('/contact', :name => "sentMessage", :id => "contactForm") do -%>
+            <%= form_for(@contact, :name => "sentMessage", :id => "contactForm") do |f|-%>
                  <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
-                       <%= label_tag 'name', 'Name' %>
-                       <%= text_field_tag 'name', nil, class: 'form-control', id: 'name', placeholder: 'Name' %>
+                       <%= f.label :name %>
+                       <%= f.text_field 'name', nil, class: 'form-control', id: 'name', placeholder: 'Name' %>
                         <p class="help-block text-danger"></p>
                     </div>
                  </div>
@@ -39,10 +39,7 @@
                             <%= submit_tag 'Send', class: 'btn btn-default' %>
                         </div>
                     </div>
-             
-              
-            <% end -%>
-
+               <% end -%>
             </div>
         </div>
     </div>

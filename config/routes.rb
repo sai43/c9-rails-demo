@@ -8,10 +8,10 @@ Rails.application.routes.draw do
 
   get 'pages/gallery'
 
-  get 'pages/contact'
+  match 'contacts' =>  'pages#contact', via: [:post]
   
-  match '/contact' => 'pages#contact', via: [:get, :post]
-  
+  match '/contact' => 'pages#new_contact', via: [:get, :post]
+   
   devise_for :users
   
   resources :posts
