@@ -21,6 +21,13 @@ gem 'kaminari'
 # file uploading
 gem 'carrierwave'
 
+# sending email
+gem 'mail_form'
+
+# form helper
+gem 'simple_form'
+
+
 group :development, :test do
   gem 'byebug'
 end
